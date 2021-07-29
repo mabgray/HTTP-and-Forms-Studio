@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<script> 
-	function init() {
-		const searchForm = document.getElementById("searchForm");
+		
+    window.addEventListener("load", function(){
+        const searchForm = document.getElementById("searchForm");
 		searchForm.addEventListener("submit", setSearchEngine);
 		function setSearchEngine() {
 			const radioBtn = document.querySelector("input[name='engine']:checked");
@@ -21,9 +22,7 @@
 			}
 			searchForm.setAttribute("action", actionURL);
 		}
-	}
-    window.addEventListener("load", function(){
-        init();
+	
     });
 	</script>
 </head>
