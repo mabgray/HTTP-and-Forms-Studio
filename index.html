@@ -16,9 +16,9 @@
 		searchForm.addEventListener("submit", setSearchEngine);//this makes sure this happens before submission
 		function setSearchEngine() {
 			const radioBtn = document.querySelector("input[name='engine']:checked");//only one is checked 
-			const engine = radioBtn.value;
-			let actionURL = actions[engine];
-			searchForm.setAttribute("action", actionURL);
+			const engine = radioBtn.value;//this holds what will be the key for the next line
+			let actionURL = actions[engine];//this actually holds the url
+			searchForm.setAttribute("action", actionURL);//this sets the action attribute in <form>
 		}
 	
     });
